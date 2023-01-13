@@ -1,46 +1,6 @@
-m1:
-Console.WriteLine("Введите кол-во элементов массива");
-int number = 0;
-try
-{
-    number = Convert.ToInt32(Console.ReadLine());
-}
-catch
-{
-    Console.WriteLine("Введены некорректные данные (нужно вводить числа)");
-    goto m1;
-}
-
-string[] mas = new string[number];
-string[] res = new string[number];
-
-for (int i = 0; i < number; i++)
-{
-    Console.WriteLine("mas[{0}]", i + 1);
-    mas[i] = Console.ReadLine();
-}
-
-Console.WriteLine("Начальный массив: ");
-for (int i = 0; i < number; i++)
-{
-    Console.Write(mas[i] + " ");
-}
-
-string str = "";
-
-for (int i = 0; i < number; i++)
-{
-    str = mas[i];
-
-    if (str.Length <= 3)
-    {
-        res[i] = str;
-    }
-}
-
-Console.WriteLine(" ");
-Console.WriteLine("Конечный массив: ");
-for (int i = 0; i < number; i++)
-{
-    Console.Write(res[i] + " ");
-}
+1. Пользователь вводит с клавиатуры кол-во элементов массива;
+2. проверяется корректность ввода данных;
+3. Пользователь самостоятельно заполняет каждый элемент массива;
+4. В консоль выводится начальный массив элементов;
+5. Проверяется каждый элемент массива на кол-во символов (если больше 3-х то в конечный массив данный элемент не берется);
+6. В консоль выводится конечный массив элементов.
